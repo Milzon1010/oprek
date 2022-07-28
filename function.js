@@ -252,25 +252,69 @@ function jumlahVolumeDuaKubus(a, b) {
 
 /**
  * Parameter :
- * variable yang ditulis didalam kurung pada saat function dibuat, 
+ * variable yang ditulis didalam kurung pada saat function dibuat,
  * digunakan untuk menampung nilai yang dikirimkan saat function dipanggil
- * 
+ *
  * Arguments :
  * nilai yang dikirimkan ke parameter saat function dipanggil
- * 
-*/
-function tambah (a, b){
-  return a + b;
-  // a & b adalah parameter
-}
+ *
+ */
+// function tambah (a, b){
+//   return a + b;
+//   // a & b adalah parameter
+// }
 // var hasil = tambah (2, 3);
-  // 5 & 10 aalah arguments
-// console.log(tambah(2, 3)); 
+// 5 & 10 aalah arguments
+// console.log(tambah(2, 3));
   // atau
 // console.log(hasil);
-  // atau ditulis sepert ini :
-var a = 4;
-var b = 8;
-var hasil = tambah (a, b);
-// a & b berbeda dari a & b parameter diatas
-console.log(hasil);
+// atau ditulis sepert ini :
+// var a = 4;
+// var b = 8;
+// var hasil = tambah (a, b);
+// // a & b berbeda dari a & b parameter diatas
+// console.log(hasil);
+
+// var a = parseInt(prompt('masukan nilai 1 :'));
+// var b = parseInt(prompt('masukan nilai 2 :'));
+// var hasil = tambah (a*2, b*2);
+// // a & b berbeda dari a & b parameter diatas
+// console.log(hasil);
+
+// function tambah(a, b) {
+//   return a + b;
+// }
+// function kali(a, b) {
+//   return a * b;
+// }
+// var hasil = kali(tambah(1,2), tambah(3,4));
+// console.log(hasil);
+
+// jika parameternya lebih sedikit dari arguments
+// maka arguments kelebihannya akan diabaikan
+
+// jika parameternya lebih banyak dari arguments
+// maka arguments kelebihannya akan diisi dengan nilai "undefined"
+
+// berbeda dengan arguments dalam array
+
+// (khusus bahasa javascript)
+
+// function tambah (){
+//   return arguments;
+// }
+// var coba = tambah(5, 10, 20, "hi", false);
+// console.log(coba);
+
+// SUDO VARIABLES ARGUMENTS
+function tambah (){
+  var hasil = 0;
+  for (var i = 0; i < arguments.length; i++){
+    hasil += arguments[i];
+  }
+  return hasil;
+}
+var coba = tambah (1, 2, 3, 4);
+// jadi tidak perlu diganti function, cukup menambahkan array arguments
+// 1,2,3,4 dst
+console.log(coba);
