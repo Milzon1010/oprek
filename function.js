@@ -317,4 +317,64 @@ function tambah (){
 var coba = tambah (1, 2, 3, 4);
 // jadi tidak perlu diganti function, cukup menambahkan array arguments
 // 1,2,3,4 dst
-console.log(coba);
+// console.log(coba);
+
+/**
+ * perbandingan antara 
+ * 
+ * function declaration VS function expressions
+ * 
+ * function declaration :
+ * function indentifier (parameterList > optional) {function body}
+ * 
+ * function expressions :
+ * function indentifier >> optional (parameterList > optional) {function body}
+ 
+ * */ 
+
+// function declaration :
+// function tampilPesan (nama){
+//   console.log('halo ' + nama);
+// }
+// tampilPesan('Robby')
+//  tampilPesan boleh diletakkan diatas
+
+
+// kalau menjadi function expressions maka :
+var tampilPesan = function (nama){
+  // console.log('halo' + nama);
+}
+// var tampilPesan adalah expression nya
+
+/**
+ * function declration :
+ * 1. lebih flexible (dapat ditulis dimanapun)
+ *    mau di declration dulu baru panggil function, atau function dulu baru declare
+ *    karena di javascript itu ada :
+ *    a. hoisting = dimana deklrasi sebuah function itu disimpan dulu di memory
+ 
+ * 2. lebih mudah di fahami untuk pemula
+ * 
+ * Function expression :
+ * 1. harus didefinisikan terlebih dahulu sebelum dipanggil
+ * 2. lebih powerfull 
+ *    a. sebagai closure 
+ *    b. sebagai argument untuk function yang lain.
+ *    c. bisa dibuat sebagi IIFE (immediately invoked function expressions)
+ * 
+ * */ 
+
+// bila :
+// var tampilPesan = function (nama){
+//   console.log('halo ' + nama);
+// }
+// tampilPesan ('anton');
+// diatas ini benar
+// tapi bila :
+
+tampilPesan ('anton');
+var tampilPesan = function (nama){
+  console.log('halo ' + nama);
+}
+// diatas ini salah
+// tidak akan ada output sama sekali
