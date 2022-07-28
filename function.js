@@ -143,28 +143,27 @@ let result = sum(1, 2);
 //     if(angka[x]%2==1){
 //         ganjil.push(angka[x])
 //     }
-// }  
- 
+// }
 
 // console.log(ganjil);
 
-    // nah disini kamu bisa gunakan for loop yang disoal sebelumnya dengan kondisi 
-    // nilai ganjil agar looping yang terjadi sesuai dengan isi variabel angka / array. 
-    // jika belum bisa bisa tanyakan lagi. Makasih
+// nah disini kamu bisa gunakan for loop yang disoal sebelumnya dengan kondisi
+// nilai ganjil agar looping yang terjadi sesuai dengan isi variabel angka / array.
+// jika belum bisa bisa tanyakan lagi. Makasih
 
 //   *** FUNCTION
 
- function namaFungsi(parameter1, parameter2) {
-     // Kode yang ingin dieksekusi
- }
+function namaFungsi(parameter1, parameter2) {
+  // Kode yang ingin dieksekusi
+}
 /**
  * Penulisan function di javascript
- * Function bisa memiliki parameter bisa juga tidak memiliki parameter, 
+ * Function bisa memiliki parameter bisa juga tidak memiliki parameter,
  * arameter ini digunakan untuk menentukan proses yang ingin dijalankan sesuai dengan kebutuhan
- * */ 
+ * */
 
- function hitung(p1, p2) {
-    return p1+p2;
+function hitung(p1, p2) {
+  return p1 + p2;
 }
 
 // console.log(hitung(7,5));
@@ -173,16 +172,105 @@ let result = sum(1, 2);
 // Selain penulisan function dengan cara diatas
 // bisa menggunakan anonymous function dengan cara dideklarasikan terlebih dahulu dengan variabel.
 
-var hitung = function(p1, p2) {
-	return p1+p2;
-}
+var hitung = function (p1, p2) {
+  return p1 + p2;
+};
 // console.log(hitung(7,5));
 
 // Varibel namaBuah tidak bisa diakses disini
 
 function buah() {
-	var namaBuah = 'Apel';
-	// Varibel namaBuah bisa diakses disini
+  var namaBuah = "Apel";
+  // Varibel namaBuah bisa diakses disini
 }
-		
+
 // Varibel namaBuah tidak bisa diakses disini
+
+//  FUNCTION DECLARATIONS
+
+function jumlahDuaBilangan(a, b) {
+  var total;
+  total = a + b;
+
+  return total;
+}
+
+//  FUNCTION EXPRESSIONS
+
+// var jumlahDuaBilangan = function (a, b){
+//   var total;
+//   total = a + b:
+
+//   return total;
+// }
+
+// sebuah fucntion boleh ada parameter atau tidak
+// tapi kurung kurawal tetap ada
+// return juga tidak mesti ada
+
+// ada blok kode yang dibuat untuk melakukan tugas spesific
+// dapat dipanggil berulang kali
+// memudahkan penelusuran
+
+/**
+ * case1
+ * menjumlahkan 2 buah kubus
+ * 1.ketahui sisi masing2 kubus  kubus a 8 ; kubus b 3
+ * 2.hitung volume masing2 kubus kubus a 8**3 = 512 ; kubus b 3**3 = 27
+ * 3.jumlahkan hasilnya 512 + 27
+ * 4.kembalikan nilai jawabannya 539
+ *
+ * */
+
+// var a = 8;
+// var b = 3;
+// var volumeA;
+// var volumeB;
+// var total;
+
+// volumeA = a * a * a;
+// volumeB = b * b * b;
+
+// total = volumeA + volumeB;
+// console.log(total);
+
+function jumlahVolumeDuaKubus(a, b) {
+  var total;
+  var volumeA;
+  var volumeB;
+  var total;
+
+  volumeA = a * a * a;
+  volumeB = b * b * b;
+
+  total = volumeA + volumeB;
+
+  return total;
+}
+// console.log(jumlahVolumeDuaKubus(8,3));
+// console.log(jumlahVolumeDuaKubus(15,27));
+
+/**
+ * Parameter :
+ * variable yang ditulis didalam kurung pada saat function dibuat, 
+ * digunakan untuk menampung nilai yang dikirimkan saat function dipanggil
+ * 
+ * Arguments :
+ * nilai yang dikirimkan ke parameter saat function dipanggil
+ * 
+*/
+function tambah (a, b){
+  return a + b;
+  // a & b adalah parameter
+}
+// var hasil = tambah (2, 3);
+  // 5 & 10 aalah arguments
+// console.log(tambah(2, 3)); 
+  // atau
+// console.log(hasil);
+  // atau ditulis sepert ini :
+var a = 4;
+var b = 8;
+var hasil = tambah (a, b);
+// a & b berbeda dari a & b parameter diatas
+console.log(hasil);
