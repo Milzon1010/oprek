@@ -75,8 +75,39 @@ var arr5 = ['Foxxen', 'Milzon', 'naksu'];
 // console.log(arr5);
 
 // menampilkan isi array :
-var arr7 = ['Foxxen', 'felis', 'naksu'];
-for (var i = 0; i < 3; i++){
+var arr7 = ['Foxxen', 'felis', 'naksu', 'jang uk'];
+// for (var i = 0; i < 3; i++){
+    // // console.log(arr7[0]);
+    // console.log('pemain ke- ' + (i+1) + ' :', arr7[i]);
+// }
+// jika javascript hitung sendiri berapa element diatas ketika ditambah
+// codenya ditambah arr7.length;
+
+for (var i = 0; i < arr7.length; i++){
     // console.log(arr7[0]);
-    console.log('pemain ke- ' + (i+1) + ' :', arr7[i]);
+    // console.log(arr7[i]);
+    // console.log('pemain ke- ' + (i+1) + ' :', arr7[i]);
 }
+
+/**
+ * methode pada array
+ * methode itu adalah function dalam sebuah object
+ * 1. .length >> untuk mengetahui jumlah element yg ada pada array
+ * 2. .join >> yang menggabungkan seluruh isi array dan merubahnya jadi string
+ * 3. push, pop, shift, unshift
+ *    >> untuk menambah atau menghapus element array
+ * push = menambahkan element baru di akhir array nya
+ * pop = menghapus element array yang terakhir
+ * unshift = menambahkan element baru di awal array nya
+ * */ 
+
+ var arr8 = ['Foxxen', 'felis', 'naksu'];
+//  console.log(arr8.join());
+// arr8.push('jang uk')
+// .push bisa menambah berapapun element
+// arr8.pop();
+// kalau pop harus satu per satu
+arr8.unshift('jang uk', 'dang du')
+console.log(arr8.join(' - '));
+//  bentuknya jadi string
+// output : foxxen,felis, naksu
